@@ -1,0 +1,15 @@
+rootProject.name = 'AbyssalCreatures'
+
+include 'Mobzy'
+project(':Mobzy').projectDir = new File('../Mobzy')
+
+//FIXME this screws up the project hierarchy but only sometimes
+if (useLocalGuiy.toBoolean()) {
+    include 'guiy'
+    project(':guiy').projectDir = new File('../guiy')
+}
+
+if (useLocalIdofront.toBoolean()) {
+    include 'idofront'
+    project(':idofront').projectDir = new File('../idofront')
+}
