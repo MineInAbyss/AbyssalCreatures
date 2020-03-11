@@ -1,8 +1,8 @@
 package com.mineinabyss.abyssalcreatures.mobs.passive
 
-import com.offz.spigot.mobzy.mobs.MobTemplate
-import com.offz.spigot.mobzy.mobs.types.PassiveMob
-import com.offz.spigot.mobzy.pathfinders.PathfinderGoalLookAtPlayerPitchLock
+import com.mineinabyss.mobzy.mobs.MobTemplate
+import com.mineinabyss.mobzy.mobs.types.PassiveMob
+import com.mineinabyss.mobzy.pathfinders.PathfinderGoalLookAtPlayerPitchLock
 import net.minecraft.server.v1_15_R1.*
 import org.bukkit.Material
 import org.bukkit.entity.LivingEntity

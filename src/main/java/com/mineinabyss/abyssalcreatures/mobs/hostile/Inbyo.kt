@@ -3,8 +3,8 @@ package com.mineinabyss.abyssalcreatures.mobs.hostile
 import com.mineinabyss.idofront.items.editItemMeta
 import com.mineinabyss.abyssalcreatures.mobs.ThrownRock
 import com.mineinabyss.abyssalcreatures.mobs.passive.Neritantan
-import com.offz.spigot.mobzy.mobs.behaviours.HitBehaviour
-import com.offz.spigot.mobzy.mobs.types.HostileMob
+import com.mineinabyss.mobzy.mobs.behaviours.HitBehaviour
+import com.mineinabyss.mobzy.mobs.types.HostileMob
 import net.minecraft.server.v1_15_R1.*
 import org.bukkit.Material
 import org.bukkit.craftbukkit.v1_15_R1.inventory.CraftItemStack

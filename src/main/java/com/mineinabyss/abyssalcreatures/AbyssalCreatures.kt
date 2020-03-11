@@ -1,6 +1,6 @@
 package com.mineinabyss.abyssalcreatures
 
-import com.offz.spigot.mobzy.*
+import com.mineinabyss.mobzy.*
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
 

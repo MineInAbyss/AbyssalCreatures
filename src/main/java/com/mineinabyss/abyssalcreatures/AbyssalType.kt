@@ -3,9 +3,9 @@ package com.mineinabyss.abyssalcreatures
 import com.mineinabyss.abyssalcreatures.mobs.flying.*
 import com.mineinabyss.abyssalcreatures.mobs.hostile.*
 import com.mineinabyss.abyssalcreatures.mobs.passive.*
-import com.offz.spigot.mobzy.registerEntity
-import com.offz.spigot.mobzy.registerTypes
-import com.offz.spigot.mobzy.toEntityTypeID
+import com.mineinabyss.mobzy.registerEntity
+import com.mineinabyss.mobzy.registerTypes
+import com.mineinabyss.mobzy.toEntityTypeID
 import net.minecraft.server.v1_15_R1.EnumCreatureType
 
 /**
