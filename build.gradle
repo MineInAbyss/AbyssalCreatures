@@ -8,9 +8,10 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'kotlin'
 
-group = 'com.github.MineInAbyss'
-version = plugin_version + '-SNAPSHOT'
-println(version)
+group = 'com.mineinabyss'
+version = plugin_version
+
+if (project.hasProperty("buildNo")) version += ".$buildNo"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -54,7 +55,7 @@ shadowJar {
     getArchiveBaseName().set("AbyssalCreatures")
     getArchiveClassifier().set(null)
 
-    relocate 'com.mineinabyss.idofront', "com.mineinabyss.idofront.${project.group}.${project.name}"
+    relocate 'com.mineinabyss.idofront', "${project.group}.${project.name}.idofront".toLowerCase()
 
     minimize()
 }

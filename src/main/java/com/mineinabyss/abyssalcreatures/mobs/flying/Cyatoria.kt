@@ -1,4 +1,4 @@
-package com.offz.spigot.abyssalcreatures.mobs.flying
+package com.mineinabyss.abyssalcreatures.mobs.flying
 
 import com.offz.spigot.mobzy.mobs.behaviours.HitBehaviour
 import com.offz.spigot.mobzy.mobs.types.FlyingMob

@@ -1,4 +1,4 @@
-package com.offz.spigot.abyssalcreatures.mobs
+package com.mineinabyss.abyssalcreatures.mobs
 
 import net.minecraft.server.v1_15_R1.*
 import net.minecraft.server.v1_15_R1.MovingObjectPosition.EnumMovingObjectType

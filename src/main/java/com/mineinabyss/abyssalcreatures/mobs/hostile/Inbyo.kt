@@ -1,8 +1,8 @@
-package com.offz.spigot.abyssalcreatures.mobs.hostile
+package com.mineinabyss.abyssalcreatures.mobs.hostile
 
 import com.mineinabyss.idofront.items.editItemMeta
-import com.offz.spigot.abyssalcreatures.mobs.ThrownRock
-import com.offz.spigot.abyssalcreatures.mobs.passive.Neritantan
+import com.mineinabyss.abyssalcreatures.mobs.ThrownRock
+import com.mineinabyss.abyssalcreatures.mobs.passive.Neritantan
 import com.offz.spigot.mobzy.mobs.behaviours.HitBehaviour
 import com.offz.spigot.mobzy.mobs.types.HostileMob
 import net.minecraft.server.v1_15_R1.*

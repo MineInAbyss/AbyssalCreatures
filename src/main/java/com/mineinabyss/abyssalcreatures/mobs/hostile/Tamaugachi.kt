@@ -1,4 +1,4 @@
-package com.offz.spigot.abyssalcreatures.mobs.hostile
+package com.mineinabyss.abyssalcreatures.mobs.hostile
 
 import com.mineinabyss.idofront.items.editItemMeta
 import com.offz.spigot.mobzy.mobs.behaviours.HitBehaviour

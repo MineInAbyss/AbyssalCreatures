@@ -1,4 +1,4 @@
-package com.offz.spigot.abyssalcreatures.mobs.passive
+package com.mineinabyss.abyssalcreatures.mobs.passive
 
 import com.offz.spigot.mobzy.mobs.MobTemplate
 import com.offz.spigot.mobzy.mobs.types.PassiveMob

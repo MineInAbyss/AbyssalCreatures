@@ -1,8 +1,8 @@
-package com.offz.spigot.abyssalcreatures
+package com.mineinabyss.abyssalcreatures
 
-import com.offz.spigot.abyssalcreatures.mobs.flying.*
-import com.offz.spigot.abyssalcreatures.mobs.hostile.*
-import com.offz.spigot.abyssalcreatures.mobs.passive.*
+import com.mineinabyss.abyssalcreatures.mobs.flying.*
+import com.mineinabyss.abyssalcreatures.mobs.hostile.*
+import com.mineinabyss.abyssalcreatures.mobs.passive.*
 import com.offz.spigot.mobzy.registerEntity
 import com.offz.spigot.mobzy.registerTypes
 import com.offz.spigot.mobzy.toEntityTypeID
