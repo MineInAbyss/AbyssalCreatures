@@ -1,8 +1,8 @@
 package com.mineinabyss.abyssalcreatures.mobs.hostile
 
-import com.mineinabyss.idofront.items.editItemMeta
 import com.mineinabyss.abyssalcreatures.mobs.ThrownRock
 import com.mineinabyss.abyssalcreatures.mobs.passive.Neritantan
+import com.mineinabyss.idofront.items.editItemMeta
 import com.mineinabyss.mobzy.mobs.behaviours.HitBehaviour
 import com.mineinabyss.mobzy.mobs.types.HostileMob
 import net.minecraft.server.v1_15_R1.*
@@ -26,8 +26,8 @@ class Inbyo(world: World?) : HostileMob(world, "Inbyo"), HitBehaviour, IRangedEn
         a(SoundEffects.ENTITY_SNOW_GOLEM_SHOOT, 1.0f, 1.0f / (getRandom().nextFloat() * 0.4f + 0.8f))
         snowball.shoot(dX, dY + f1, dZ, 1.6f, 12.0f)
 
-        val itemStack = ItemStack(Material.SNOWBALL).editItemMeta {
-            setCustomModelData(1)
+        val itemStack = ItemStack(Material.DIAMOND_SWORD).editItemMeta {
+            setCustomModelData(3)
         }
         snowball.setItem(CraftItemStack.asNMSCopy(itemStack))
         world.addEntity(snowball)
