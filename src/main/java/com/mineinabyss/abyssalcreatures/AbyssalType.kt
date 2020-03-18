@@ -3,10 +3,13 @@ package com.mineinabyss.abyssalcreatures
 import com.mineinabyss.abyssalcreatures.mobs.flying.*
 import com.mineinabyss.abyssalcreatures.mobs.hostile.*
 import com.mineinabyss.abyssalcreatures.mobs.passive.*
+import com.mineinabyss.mobzy.mobs.MobTemplate
 import com.mineinabyss.mobzy.registerEntity
+import com.mineinabyss.mobzy.registerHardCodedTemplate
 import com.mineinabyss.mobzy.registerTypes
 import com.mineinabyss.mobzy.toEntityTypeID
 import net.minecraft.server.v1_15_R1.EnumCreatureType
+import org.bukkit.Material
 
 /**
  * (..., func = ::Neritantan)   is the same as   (...){ world -> Neritantan(world) }   or   (...){ Neritantan(it) }
@@ -42,7 +45,12 @@ class AbyssalType {
     val ROHANA = registerEntity("rohana", EnumCreatureType.WATER_CREATURE, width = 0.6f, height = 0.6f, func = ::Rohana)
 
     //NPCs
-    fun registerNPC(name: String, modelID: Int) = registerEntity(name.toEntityTypeID(), EnumCreatureType.MISC, templateName = "npc", width = 0.6f, height = 2f) { NPC(it, name, modelID) }
+    fun registerNPC(name: String, modelID: Int) { //TODO don't like having to do things through hardcoded templates, think of something better
+        val template = registerHardCodedTemplate(name, MobTemplate(_name = name, model = modelID, modelMaterial = Material.DIAMOND_AXE))
+        registerEntity(name.toEntityTypeID(), EnumCreatureType.MISC, width = 0.6f, height = 2f) {
+            NPC(it, template)
+        }
+    }
 
     val MITTY = registerNPC("Mitty", 2)
     val NANACHI = registerNPC("Nanachi", 3)
