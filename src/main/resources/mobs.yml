@@ -53,6 +53,10 @@ fuwagi:
         type: RABBIT
         display-name: §rRaw Fuwagi Meat
         custom-model-data: 1
+      cooked-item:
+        type: COOKED_RABBIT
+        display-name: §rCooked Fuwagi Meat
+        custom-model-data: 1
       drop-chance: 0.5
     - item:
         type: RABBIT_FOOT
@@ -315,5 +319,3 @@ cyatoria:
   movement-speed: 0.05
   min-exp: 15
   max-exp: 22
-npc:
-  model: 1

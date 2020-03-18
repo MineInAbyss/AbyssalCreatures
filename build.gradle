@@ -48,7 +48,7 @@ dependencies {
     compileOnly project(':Mobzy')
 
     if (useLocalIdofront.toBoolean()) implementation project(':idofront')
-    else implementation 'com.mineinabyss:idofront:0.1.+'
+    else implementation 'com.mineinabyss:idofront:0.1.2-alpha.11'
 }
 
 shadowJar {

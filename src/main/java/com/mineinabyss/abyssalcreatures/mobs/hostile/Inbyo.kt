@@ -17,6 +17,7 @@ class Inbyo(world: World?) : HostileMob(world, "Inbyo"), HitBehaviour, IRangedEn
         addPathfinderGoal(1, PathfinderGoalArrowAttack(this, 1.25, 40, 10.0f))
     }
 
+    //TODO rewrite as our own pathfinder
     override fun a(entityliving: EntityLiving, f: Float) {
         val snowball = ThrownRock(world, this)
         val dX = entityliving.locX() - locX()
@@ -26,8 +27,8 @@ class Inbyo(world: World?) : HostileMob(world, "Inbyo"), HitBehaviour, IRangedEn
         a(SoundEffects.ENTITY_SNOW_GOLEM_SHOOT, 1.0f, 1.0f / (getRandom().nextFloat() * 0.4f + 0.8f))
         snowball.shoot(dX, dY + f1, dZ, 1.6f, 12.0f)
 
-        val itemStack = ItemStack(Material.DIAMOND_SWORD).editItemMeta {
-            setCustomModelData(3)
+        val itemStack = ItemStack(Material.SNOWBALL).editItemMeta {
+            setCustomModelData(3) //TODO fix coal pebble model
         }
         snowball.setItem(CraftItemStack.asNMSCopy(itemStack))
         world.addEntity(snowball)
