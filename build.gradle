@@ -16,6 +16,9 @@ if (project.hasProperty("buildNo")) version += ".$buildNo"
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+def github_username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+def github_password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+
 repositories {
     mavenCentral()
     jcenter()
@@ -28,27 +31,34 @@ repositories {
     }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
     maven { url 'https://erethon.de/repo/' } //HeadLib
-
     maven {
         name = "MineInAbyss"
         url = uri("https://maven.pkg.github.com/MineInAbyss/Idofront")
         credentials {
-            username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-            password = project.findProperty("gpr.key") ?: System.getenv("PASSWORD")
+            username = github_username
+            password = github_password
+        }
+    }
+    maven {
+        name = "CultOfClang"
+        url = uri("https://maven.pkg.github.com/CultOfClang/Minecraft/")
+        credentials {
+            username = github_username
+            password = github_password
         }
     }
     mavenLocal()
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compileOnly 'org.spigotmc:spigot-api:1.15-R0.1-SNAPSHOT' //Spigot
     compileOnly 'org.spigotmc:spigot:1.15-R0.1-SNAPSHOT' // NMS
     compileOnly 'de.erethon:headlib:3.0.2'
+    compileOnly "org.cultofclang.minecraft:kotlinspice:0.1.11"
     compileOnly project(':Mobzy')
 
     if (useLocalIdofront.toBoolean()) implementation project(':idofront')
-    else implementation 'com.mineinabyss:idofront:0.1.2-alpha.11'
+    else implementation 'com.mineinabyss:idofront:0.1.+'
 }
 
 shadowJar {
