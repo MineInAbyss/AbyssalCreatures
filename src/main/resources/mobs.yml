@@ -19,9 +19,16 @@ ashimite:
   max-exp: 7
   drops:
     - item:
-        type: MUTTON
+        type: PORKCHOP
+        custom-model-data: 1
         display-name: §rRaw Ashimite Meat
+      cooked-item:
+        type: COOKED_PORKCHOP
+        display-name: §rCooked Ashimite Meat
+        custom-model-data: 1
       drop-chance: 0.5
+      min-amount: 1
+      max-amount: 2
 makihige:
   model: 56
   max-health: 10
@@ -76,6 +83,11 @@ okibo:
     - item:
         type: PORKCHOP
         display-name: §rRaw Okibo Meat
+        custom-model-data: 3
+      cooked-item:
+        type: COOKED_PORKCHOP
+        display-name: §rCooked Okibo Meat
+        custom-model-data: 3
       min-amount: 1
       max-amount: 2
     - item:
@@ -226,8 +238,13 @@ corpse_weeper:
   max-exp: 15
   drops:
     - item:
-        type: CHICKEN
+        type: PORKCHOP
         display-name: §rRaw Corpse Weeper Meat
+        custom-model-data: 2
+      cooked-item:
+        type: COOKED_PORKCHOP
+        display-name: §rCooked Corpse Weeper Meat
+        custom-model-data: 2
       min-amount: 1
       max-amount: 2
     - item:
@@ -262,8 +279,13 @@ hammerbeak:
   max-exp: 12
   drops:
     - item:
-        type: CHICKEN
-        display-name: §rRaw Hammerbeak Meat
+        type: SALMON
+        display-name: §rRaw Hammerbeak Wing
+        custom-model-data: 3
+      cooked-item:
+        type: COOKED_SALMON
+        display-name: §rCooked Hammerbeak Wing
+        custom-model-data: 3
       min-amount: 1
       max-amount: 2
     - item:
