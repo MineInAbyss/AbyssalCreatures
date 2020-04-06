@@ -16,7 +16,6 @@ class Fuwagi(world: World?) : PassiveMob(world, "Fuwagi"), HitBehaviour {
     override fun createPathfinders() {
         super.createPathfinders()
         addPathfinderGoal(1, PathfinderGoalAvoidTarget(this, EntityHuman::class.java, 8.0f, 1.0, 1.0))
-        addPathfinderGoal(4, PathfinderGoalTemptPitchLock(this, staticTemplate.temptItems
-                ?: error("Cannot create pathfinder without tempt items")))
+        addPathfinderGoal(4, PathfinderGoalTemptPitchLock(this, template.temptItems))
     }
 }

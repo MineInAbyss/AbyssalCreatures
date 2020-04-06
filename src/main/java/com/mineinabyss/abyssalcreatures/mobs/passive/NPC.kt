@@ -1,12 +1,10 @@
 package com.mineinabyss.abyssalcreatures.mobs.passive
 
-import com.mineinabyss.mobzy.mobs.MobTemplate
 import com.mineinabyss.mobzy.mobs.types.PassiveMob
 import com.mineinabyss.mobzy.pathfinders.PathfinderGoalLookAtPlayerPitchLock
 import net.minecraft.server.v1_15_R1.*
-import org.bukkit.entity.LivingEntity
 
-class NPC(world: World?, template: MobTemplate) : PassiveMob(world, template) {
+class NPC(world: World?, name: String) : PassiveMob(world, name) {
     //Stop from being pushed around
     override fun move(enummovetype: EnumMoveType?, vec3d: Vec3D?) = Unit
 
@@ -25,6 +23,6 @@ class NPC(world: World?, template: MobTemplate) : PassiveMob(world, template) {
         customNameVisible = true
         isInvulnerable = true
         addScoreboardTag("npc")
-        (bukkitEntity as LivingEntity).removeWhenFarAway = false
+        living.removeWhenFarAway = false
     }
 }
