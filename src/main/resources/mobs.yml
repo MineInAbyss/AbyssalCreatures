@@ -1,343 +1,344 @@
-# Passive
-neritantan:
-  model: 2
-  max-health: 7
-  movement-speed: 0.25
-  min-exp: 5
-  max-exp: 7
-  tempt-items: [CARROT, POTATO, BEETROOT]
-  drops:
-    - item:
-        type: MUTTON
-        display-name: §rRaw Neritantan Meat
-      drop-chance: 0.5
-ashimite:
-  model: 53
-  max-health: 10
-  movement-speed: 0.5
-  min-exp: 5
-  max-exp: 7
-  drops:
-    - item:
-        type: PORKCHOP
-        custom-model-data: 1
-        display-name: §rRaw Ashimite Meat
-      cooked-item:
-        type: COOKED_PORKCHOP
-        display-name: §rCooked Ashimite Meat
-        custom-model-data: 1
-      drop-chance: 0.5
-      min-amount: 1
-      max-amount: 2
-makihige:
-  model: 56
-  max-health: 10
-  movement-speed: 0.2
-  min-exp: 7
-  max-exp: 10
-  drops:
-    - item:
-        type: INK_SAC
-      min-amount: 1
-      max-amount: 2
-    - item:
-        type: OBSIDIAN
-        display-name: §rMakihige Shell
-      drop-chance: 0.2
-    - item:
-        type: LEATHER
-      min-amount: 1
-      max-amount: 2
-fuwagi:
-  model: 5
-  max-health: 10
-  movement-speed: 0.25
-  min-exp: 5
-  max-exp: 7
-  tempt-items: [CARROT, APPLE]
-  drops:
-    - item:
-        type: RABBIT
-        display-name: §rRaw Fuwagi Meat
-        custom-model-data: 1
-      cooked-item:
-        type: COOKED_RABBIT
-        display-name: §rCooked Fuwagi Meat
-        custom-model-data: 1
-      drop-chance: 0.5
-    - item:
-        type: RABBIT_FOOT
-        display-name: §rFuwagi Foot
-      drop-chance: 0.1
-    - item:
-        type: RABBIT_HIDE
-        display-name: §rFuwagi Hide
-      drop-chance: 0.2
-okibo:
-  model: 38
-  max-health: 50
-  movement-speed: 0.2
-  min-exp: 5
-  max-exp: 7
-  drops:
-    - item:
-        type: PORKCHOP
-        display-name: §rRaw Okibo Meat
-        custom-model-data: 3
-      cooked-item:
-        type: COOKED_PORKCHOP
-        display-name: §rCooked Okibo Meat
-        custom-model-data: 3
-      min-amount: 1
-      max-amount: 2
-    - item:
-        type: LEATHER
-      min-amount: 1
-      max-amount: 2
-# Hostile
-inbyo:
-  model: 8
-  max-health: 10
-  movement-speed: 0.4
-  attack-damage: 8
-  follow-range: 64
-  min-exp: 7
-  max-exp: 14
-  drops:
-    - item:
-        type: BLACK_WOOL
-        display-name: §rInbyo Fur
-        lore: [It smells very gross]
-      min-amount: 1
-      max-amount: 3
-    - item:
-        type: BEEF
-        display-name: §rRaw Inbyo Meat
-rohana:
-  model: 14
-  max-health: 10
-  movement-speed: 0.1
-  adult: false
-  attack-damage: 0
-  min-exp: 5
-  max-exp: 7
-  drops:
-    - item:
-        type: GLOWSTONE_DUST
-        display-name: §rRohana Dust
-      drop-chance: 0.8
-    - item:
-        type: BLAZE_ROD
-        display-name: §rRohana Tail
-        lore: [It glows faintly]
-      drop-chance: 0.4
-tamaugachi:
-  model: 17
-  max-health: 100
-  movement-speed: 0.45
-  attack-damage: 16
-  follow-range: 64
-  min-exp: 25
-  max-exp: 30
-  drops:
-    - item:
-        type: QUARTZ
-        display-name: §rOrb Piercer Spike
-        lore: [They look very pointy]
-      min-amount: 5
-      max-amount: 8
-    - item:
-        type: NETHER_WART
-        display-name: §rOrb Piercer Nose Fragment
-        lore: [Squishy]
-      min-amount: 1
-      max-amount: 3
-silkfang:
-  model: 26
-  max-health: 15
-  movement-speed: 0.3
-  attack-damage: 5
-  min-exp: 7
-  max-exp: 14
-  drops:
-    - item:
-        type: STRING
-        display-name: §rSilkfang Silk
-        lore: [Finer than a Spider's]
-      min-amount: 1
-      max-amount: 3
-    - item:
-        type: SPIDER_EYE
-        display-name: §rSilkfang Eye
-        lore: [It stares back at you]
-      drop-chance: 0.2
-kuongatari:
-  model: 35
-  max-health: 7
-  movement-speed: 0.3
-  attack-damage: 3
-  follow-range: 10
-  min-exp: 5
-  max-exp: 8
-  drops:
-    - item:
-        type: LIME_DYE
-        display-name: §rKuongatari Dye
-        lore: [A very vibrant green]
-      drop-chance: 0.4
-    - item:
-        type: STRING
-        display-name: §rKuongatari Silk
-        lore: [Finer than a Silkfang's]
-      min-amount: 1
-      max-amount: 3
-tesuchi:
-  model: 41
-  max-health: 1
-  movement-speed: 0.3
-  attack-damage: 0
-  min-exp: 5
-  max-exp: 7
-  drops:
-    - item:
-        type: DRIED_KELP
-        display-name: §rTesuchi Scales
-        lore: [Crispy]
-      min-amount: 1
-      max-amount: 2
-      drop-chance: 0.5
-ottobas:
-  model: 44
-  max-health: 30
-  movement-speed: 0.4
-  attack-damage: 6
-  follow-range: 20
-  min-exp: 13
-  max-exp: 15
-  drops:
-    - item:
-        type: PORKCHOP
-        display-name: §rRaw Ottobas Meat
-      max-amount: 1
-steve:
-  model: 59
-  max-health: 30
-  movement-speed: 0.3
-  attack-damage: 4
-  follow-range: 20
-  min-exp: 20
-  max-exp: 25
-# Flying
-corpse_weeper:
-  model: 11
-  max-health: 20
-  follow-range: 15
-  attack-damage: 4
-  movement-speed: 0.1
-  min-exp: 12
-  max-exp: 15
-  drops:
-    - item:
-        type: PORKCHOP
-        display-name: §rRaw Corpse Weeper Meat
-        custom-model-data: 2
-      cooked-item:
-        type: COOKED_PORKCHOP
-        display-name: §rCooked Corpse Weeper Meat
-        custom-model-data: 2
-      min-amount: 1
-      max-amount: 2
-    - item:
-        type: FEATHER
-      min-amount: 2
-      max-amount: 4
-madokajack:
-  model: 20
-  max-health: 20
-  follow-range: 20
-  attack-damage: 4
-  movement-speed: 0.12
-  min-exp: 15
-  max-exp: 20
-  drops:
-    - item:
-        type: PRISMARINE_SHARD
-        display-name: §rMadokajack Scales
-      min-amount: 2
-      max-amount: 3
-    - item:
-        type: BONE
-      min-amount: 1
-      max-amount: 2
-hammerbeak:
-  model: 23
-  max-health: 20
-  follow-range: 13
-  attack-damage: 3
-  movement-speed: 0.1
-  min-exp: 8
-  max-exp: 12
-  drops:
-    - item:
-        type: SALMON
-        display-name: §rRaw Hammerbeak Wing
-        custom-model-data: 3
-      cooked-item:
-        type: COOKED_SALMON
-        display-name: §rCooked Hammerbeak Wing
-        custom-model-data: 3
-      min-amount: 1
-      max-amount: 2
-    - item:
-        type: FEATHER
-      min-amount: 2
-      max-amount: 4
-kazura:
-  model: 29
-  max-health: 5
-  follow-range: 0
-  attack-damage: 0
-  min-exp: 5
-  max-exp: 7
-  drops:
-    - item:
-        type: INK_SAC
-      min-amount: 1
-      max-amount: 2
-benikuchinawa:
-  model: 32
-  max-health: 50
-  follow-range: 15
-  attack-damage: 5
-  movement-speed: 0.1
-  min-exp: 13
-  max-exp: 16
-  drops:
-    - item:
-        type: POPPED_CHORUS_FRUIT
-        display-name: §rSplitjaw Scales
-      min-amount: 2
-      max-amount: 3
-    - item:
-        type: SHULKER_SHELL
-        display-name: §rSplitjaw Shell
-      drop-chance: 0.15
-    - item:
-        type: SLIME_BALL
-      drop-chance: 0.5
-dosetori:
-  model: 47
-  max-health: 20
-  follow-range: 20
-  attack-damage: 3
-  movement-speed: 0.13
-  min-exp: 8
-  max-exp: 14
-cyatoria:
-  model: 50
-  max-health: 20
-  follow-range: 20
-  attack-damage: 10
-  movement-speed: 0.05
-  min-exp: 15
-  max-exp: 22
+templates:
+  # Passive
+  neritantan:
+    model: 2
+    max-health: 7
+    movement-speed: 0.25
+    min-exp: 5
+    max-exp: 7
+    tempt-items: [CARROT, POTATO, BEETROOT]
+    drops:
+      - item:
+          type: MUTTON
+          display-name: §rRaw Neritantan Meat
+        drop-chance: 0.5
+  ashimite:
+    model: 53
+    max-health: 10
+    movement-speed: 0.5
+    min-exp: 5
+    max-exp: 7
+    drops:
+      - item:
+          type: PORKCHOP
+          custom-model-data: 1
+          display-name: §rRaw Ashimite Meat
+        cooked-item:
+          type: COOKED_PORKCHOP
+          display-name: §rCooked Ashimite Meat
+          custom-model-data: 1
+        drop-chance: 0.5
+        min-amount: 1
+        max-amount: 2
+  makihige:
+    model: 56
+    max-health: 10
+    movement-speed: 0.2
+    min-exp: 7
+    max-exp: 10
+    drops:
+      - item:
+          type: INK_SAC
+        min-amount: 1
+        max-amount: 2
+      - item:
+          type: OBSIDIAN
+          display-name: §rMakihige Shell
+        drop-chance: 0.2
+      - item:
+          type: LEATHER
+        min-amount: 1
+        max-amount: 2
+  fuwagi:
+    model: 5
+    max-health: 10
+    movement-speed: 0.25
+    min-exp: 5
+    max-exp: 7
+    tempt-items: [CARROT, APPLE]
+    drops:
+      - item:
+          type: RABBIT
+          display-name: §rRaw Fuwagi Meat
+          custom-model-data: 1
+        cooked-item:
+          type: COOKED_RABBIT
+          display-name: §rCooked Fuwagi Meat
+          custom-model-data: 1
+        drop-chance: 0.5
+      - item:
+          type: RABBIT_FOOT
+          display-name: §rFuwagi Foot
+        drop-chance: 0.1
+      - item:
+          type: RABBIT_HIDE
+          display-name: §rFuwagi Hide
+        drop-chance: 0.2
+  okibo:
+    model: 38
+    max-health: 50
+    movement-speed: 0.2
+    min-exp: 5
+    max-exp: 7
+    drops:
+      - item:
+          type: PORKCHOP
+          display-name: §rRaw Okibo Meat
+          custom-model-data: 3
+        cooked-item:
+          type: COOKED_PORKCHOP
+          display-name: §rCooked Okibo Meat
+          custom-model-data: 3
+        min-amount: 1
+        max-amount: 2
+      - item:
+          type: LEATHER
+        min-amount: 1
+        max-amount: 2
+  # Hostile
+  inbyo:
+    model: 8
+    max-health: 10
+    movement-speed: 0.4
+    attack-damage: 8
+    follow-range: 64
+    min-exp: 7
+    max-exp: 14
+    drops:
+      - item:
+          type: BLACK_WOOL
+          display-name: §rInbyo Fur
+          lore: [It smells very gross]
+        min-amount: 1
+        max-amount: 3
+      - item:
+          type: BEEF
+          display-name: §rRaw Inbyo Meat
+  rohana:
+    model: 14
+    max-health: 10
+    movement-speed: 0.1
+    adult: false
+    attack-damage: 0
+    min-exp: 5
+    max-exp: 7
+    drops:
+      - item:
+          type: GLOWSTONE_DUST
+          display-name: §rRohana Dust
+        drop-chance: 0.8
+      - item:
+          type: BLAZE_ROD
+          display-name: §rRohana Tail
+          lore: [It glows faintly]
+        drop-chance: 0.4
+  tamaugachi:
+    model: 17
+    max-health: 100
+    movement-speed: 0.45
+    attack-damage: 16
+    follow-range: 64
+    min-exp: 25
+    max-exp: 30
+    drops:
+      - item:
+          type: QUARTZ
+          display-name: §rOrb Piercer Spike
+          lore: [They look very pointy]
+        min-amount: 5
+        max-amount: 8
+      - item:
+          type: NETHER_WART
+          display-name: §rOrb Piercer Nose Fragment
+          lore: [Squishy]
+        min-amount: 1
+        max-amount: 3
+  silkfang:
+    model: 26
+    max-health: 15
+    movement-speed: 0.3
+    attack-damage: 5
+    min-exp: 7
+    max-exp: 14
+    drops:
+      - item:
+          type: STRING
+          display-name: §rSilkfang Silk
+          lore: [Finer than a Spider's]
+        min-amount: 1
+        max-amount: 3
+      - item:
+          type: SPIDER_EYE
+          display-name: §rSilkfang Eye
+          lore: [It stares back at you]
+        drop-chance: 0.2
+  kuongatari:
+    model: 35
+    max-health: 7
+    movement-speed: 0.3
+    attack-damage: 3
+    follow-range: 10
+    min-exp: 5
+    max-exp: 8
+    drops:
+      - item:
+          type: LIME_DYE
+          display-name: §rKuongatari Dye
+          lore: [A very vibrant green]
+        drop-chance: 0.4
+      - item:
+          type: STRING
+          display-name: §rKuongatari Silk
+          lore: [Finer than a Silkfang's]
+        min-amount: 1
+        max-amount: 3
+  tesuchi:
+    model: 41
+    max-health: 1
+    movement-speed: 0.3
+    attack-damage: 0
+    min-exp: 5
+    max-exp: 7
+    drops:
+      - item:
+          type: DRIED_KELP
+          display-name: §rTesuchi Scales
+          lore: [Crispy]
+        min-amount: 1
+        max-amount: 2
+        drop-chance: 0.5
+  ottobas:
+    model: 44
+    max-health: 30
+    movement-speed: 0.4
+    attack-damage: 6
+    follow-range: 20
+    min-exp: 13
+    max-exp: 15
+    drops:
+      - item:
+          type: PORKCHOP
+          display-name: §rRaw Ottobas Meat
+        max-amount: 1
+  steve:
+    model: 59
+    max-health: 30
+    movement-speed: 0.3
+    attack-damage: 4
+    follow-range: 20
+    min-exp: 20
+    max-exp: 25
+  # Flying
+  corpse_weeper:
+    model: 11
+    max-health: 20
+    follow-range: 15
+    attack-damage: 4
+    movement-speed: 0.1
+    min-exp: 12
+    max-exp: 15
+    drops:
+      - item:
+          type: PORKCHOP
+          display-name: §rRaw Corpse Weeper Meat
+          custom-model-data: 2
+        cooked-item:
+          type: COOKED_PORKCHOP
+          display-name: §rCooked Corpse Weeper Meat
+          custom-model-data: 2
+        min-amount: 1
+        max-amount: 2
+      - item:
+          type: FEATHER
+        min-amount: 2
+        max-amount: 4
+  madokajack:
+    model: 20
+    max-health: 20
+    follow-range: 20
+    attack-damage: 4
+    movement-speed: 0.12
+    min-exp: 15
+    max-exp: 20
+    drops:
+      - item:
+          type: PRISMARINE_SHARD
+          display-name: §rMadokajack Scales
+        min-amount: 2
+        max-amount: 3
+      - item:
+          type: BONE
+        min-amount: 1
+        max-amount: 2
+  hammerbeak:
+    model: 23
+    max-health: 20
+    follow-range: 13
+    attack-damage: 3
+    movement-speed: 0.1
+    min-exp: 8
+    max-exp: 12
+    drops:
+      - item:
+          type: SALMON
+          display-name: §rRaw Hammerbeak Wing
+          custom-model-data: 3
+        cooked-item:
+          type: COOKED_SALMON
+          display-name: §rCooked Hammerbeak Wing
+          custom-model-data: 3
+        min-amount: 1
+        max-amount: 2
+      - item:
+          type: FEATHER
+        min-amount: 2
+        max-amount: 4
+  kazura:
+    model: 29
+    max-health: 5
+    follow-range: 0
+    attack-damage: 0
+    min-exp: 5
+    max-exp: 7
+    drops:
+      - item:
+          type: INK_SAC
+        min-amount: 1
+        max-amount: 2
+  benikuchinawa:
+    model: 32
+    max-health: 50
+    follow-range: 15
+    attack-damage: 5
+    movement-speed: 0.1
+    min-exp: 13
+    max-exp: 16
+    drops:
+      - item:
+          type: POPPED_CHORUS_FRUIT
+          display-name: §rSplitjaw Scales
+        min-amount: 2
+        max-amount: 3
+      - item:
+          type: SHULKER_SHELL
+          display-name: §rSplitjaw Shell
+        drop-chance: 0.15
+      - item:
+          type: SLIME_BALL
+        drop-chance: 0.5
+  dosetori:
+    model: 47
+    max-health: 20
+    follow-range: 20
+    attack-damage: 3
+    movement-speed: 0.13
+    min-exp: 8
+    max-exp: 14
+  cyatoria:
+    model: 50
+    max-health: 20
+    follow-range: 20
+    attack-damage: 10
+    movement-speed: 0.05
+    min-exp: 15
+    max-exp: 22

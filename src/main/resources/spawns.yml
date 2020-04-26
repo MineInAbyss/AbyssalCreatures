@@ -1,16 +1,15 @@
 # block-whitelist: if set, the blocks this mob can spawn on | List of Materials | ex. [GRASS_BLOCK, STONE] | default: no whitelist
 # spawn-pos: the type of position for the mob to be spawned in | AIR/GROUND/OVERHANG | ex. AIR | default: GROUND
-config:
-  name: Abyssal Creatures
-  icon: DIAMOND_BLOCK
+name: Abyssal Creatures
+icon: DIAMOND_BLOCK
 regions:
   - name: Template
     spawns:
       - mob: Fuwagi
         min-amount: 2
         max-amount: 3
+        radius: 10.0
         min-light: 7
-        radius: 10
         block-whitelist:
           - GRASS_BLOCK
       - mob: Hammerbeak
@@ -53,15 +52,15 @@ regions:
       - mob: Tesuchi
         min-amount: 1
         max-amount: 4
-        radius: 15
+        radius: 15.0
         block-whitelist:
           - GRASS_BLOCK
       - mob: Ottobas
         min-amount: 1
         max-amount: 2
+        radius: 30.0
         max-local-group: 2
-        local-group-radius: 128
-        radius: 30
+        local-group-radius: 128.0
         block-whitelist:
           - WATER
   - name: Inverted Forest
@@ -71,9 +70,9 @@ regions:
       - mob: Inbyo
         min-amount: 4
         max-amount: 8
-        radius: 5
-        min-y: 140
+        radius: 5.0
         max-light: 7
+        min-y: 140
   - name: Great Fault
     spawns:
       - reuse: Template:Benikuchinawa
@@ -92,14 +91,14 @@ regions:
   - name: The Goblet of Giants
     spawns:
       - mob: Tamaugachi
+        max-local-group: 1
+        local-group-radius: 128.0
         block-whitelist:
           - WATER
-        max-local-group: 1
-        local-group-radius: 128
       - mob: Kuongatari
         min-amount: 2
         max-amount: 4
-        radius: 6
+        radius: 6.0
         block-whitelist:
           - GRASS_BLOCK
       - reuse: Forest of Temptation:Rohana
@@ -108,6 +107,6 @@ regions:
       - mob: Kazura
         min-amount: 2
         max-amount: 4
-        radius: 6
+        radius: 6.0
         block-whitelist:
           - WATER

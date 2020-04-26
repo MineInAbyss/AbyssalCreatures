@@ -2,6 +2,7 @@ package com.mineinabyss.abyssalcreatures
 
 import com.mineinabyss.idofront.messaging.logInfo
 import com.mineinabyss.mobzy.MobzyAddon
+import com.mineinabyss.mobzy.api.registerAddonWithMobzy
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
 
@@ -9,7 +10,7 @@ class AbyssalCreatures : JavaPlugin(), MobzyAddon {
     override fun onEnable() {
         logInfo("Enabling AbyssalCreatures")
         saveDefaultConfig()
-        registerWithMobzy()
+        registerAddonWithMobzy()
     }
 
     override fun onDisable() {
