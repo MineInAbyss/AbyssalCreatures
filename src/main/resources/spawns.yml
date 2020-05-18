@@ -9,6 +9,7 @@ regions:
         min-amount: 2
         max-amount: 3
         radius: 10.0
+        priority: 0.5
         min-light: 7
         block-whitelist:
           - GRASS_BLOCK
@@ -16,9 +17,13 @@ regions:
         priority: 0.2
         spawn-pos: AIR
       - mob: Benikuchinawa
-        priority: 0.05
+        priority: 0.2
         spawn-pos: AIR
       - mob: Silkfang
+        priority: 0.5
+        max-light: 7
+        block-whitelist:
+          - GRASS_BLOCK
   - name: Orth
     spawns:
       - reuse: Template:Fuwagi
@@ -35,6 +40,7 @@ regions:
         block-whitelist:
           - STONE
           - COBBLESTONE
+      - reuse: Template:Silkfang
   - name: Forest of Temptation
     spawns:
       - reuse: Template:Fuwagi
@@ -55,22 +61,20 @@ regions:
         radius: 15.0
         block-whitelist:
           - GRASS_BLOCK
+      - reuse: Template:Silkfang
       - mob: Ottobas
-        min-amount: 1
-        max-amount: 2
-        radius: 30.0
-        max-local-group: 2
-        local-group-radius: 128.0
+        priority: 0.1
         block-whitelist:
           - WATER
   - name: Inverted Forest
     spawns:
       - reuse: Template:Benikuchinawa
-        priority: 0.4
+        priority: 2.0
       - mob: Inbyo
         min-amount: 4
         max-amount: 8
         radius: 5.0
+        priority: 2.0
         max-light: 7
         min-y: 140
   - name: Great Fault
@@ -91,6 +95,7 @@ regions:
   - name: The Goblet of Giants
     spawns:
       - mob: Tamaugachi
+        max-light: 7
         max-local-group: 1
         local-group-radius: 128.0
         block-whitelist:
@@ -99,6 +104,7 @@ regions:
         min-amount: 2
         max-amount: 4
         radius: 6.0
+        max-local-group: 10
         block-whitelist:
           - GRASS_BLOCK
       - reuse: Forest of Temptation:Rohana
@@ -108,5 +114,16 @@ regions:
         min-amount: 2
         max-amount: 4
         radius: 6.0
+        max-local-group: 10
         block-whitelist:
           - WATER
+      - mob: Makihige
+        max-light: 7
+        max-local-group: 3
+        block-whitelist:
+          - WATER
+  - name: Sea of Corpses
+    spawns:
+      - reuse: The Goblet of Giants:Kuongatari
+      - reuse: The Goblet of Giants:Kazura
+      - reuse: The Goblet of Giants:Makihige

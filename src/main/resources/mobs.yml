@@ -137,7 +137,7 @@ templates:
     max-health: 100
     movement-speed: 0.45
     attack-damage: 16
-    follow-range: 64
+    follow-range: 28
     min-exp: 25
     max-exp: 30
     drops:
