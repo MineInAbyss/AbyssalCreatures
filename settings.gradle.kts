@@ -1,17 +1,15 @@
 rootProject.name = "AbyssalCreatures"
 
-//includeBuild("../Mobzy")
+includeBuild("../Mobzy")
 
-val useLocalIdofront = extra["useLocalIdofront"].toString().toBoolean()
-//if (useLocalIdofront) { TODO get a better solution for toggling working locally
-includeBuild("../idofront") {
+var useLocalIdofront: String? by extra
+if (useLocalIdofront?.toBoolean() == true) includeBuild("../idofront") {
     dependencySubstitution {
-        //doesnt work regardless of whether one or two are defined
         substitute(module("com.mineinabyss:idofront")).with(project(":"))
         substitute(module("com.mineinabyss:idofront-annotation")).with(project(":annotation"))
+        substitute(module("com.mineinabyss:idofront-processor")).with(project(":processor"))
     }
 }
-//}
 
 pluginManagement {
     val kotlin_version: String by settings

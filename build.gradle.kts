@@ -3,6 +3,7 @@ import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
     java
+    idea
     id("com.github.johnrengelman.shadow")
     kotlin("jvm")
     kotlin("kapt") version "1.3.72"
@@ -35,10 +36,11 @@ dependencies {
     compileOnly("org.spigotmc:spigot:1.15-R0.1-SNAPSHOT") // NMS
     compileOnly("de.erethon:headlib:3.0.2")
     compileOnly("org.cultofclang.minecraft:kotlinspice:$kotlin_version+")
-//    compileOnly("com.mineinabyss:mobzy") TODO removed while trying to get gradle to work
+    compileOnly("com.mineinabyss:mobzy")
 
     implementation("com.mineinabyss:idofront")
     implementation("com.mineinabyss:idofront-annotation")
+    kapt("com.mineinabyss:idofront-processor")
 }
 
 tasks {
