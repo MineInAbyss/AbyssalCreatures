@@ -1,9 +1,0 @@
-rootProject.name = 'AbyssalCreatures'
-
-include 'Mobzy'
-project(':Mobzy').projectDir = new File('../Mobzy')
-
-if (useLocalIdofront.toBoolean()) {
-    include 'idofront'
-    project(':idofront').projectDir = new File('../idofront')
-}
