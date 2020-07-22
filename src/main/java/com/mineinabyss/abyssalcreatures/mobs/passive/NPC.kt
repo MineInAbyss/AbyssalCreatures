@@ -1,7 +1,7 @@
 package com.mineinabyss.abyssalcreatures.mobs.passive
 
 import com.mineinabyss.mobzy.mobs.types.PassiveMob
-import com.mineinabyss.mobzy.pathfinders.PathfinderGoalLookAtPlayerPitchLock
+import com.mineinabyss.mobzy.pathfinders.LookAtPlayerGoal
 import net.minecraft.server.v1_16_R1.*
 
 class NPC(world: World?, name: String) : PassiveMob(world, name) {
@@ -15,7 +15,7 @@ class NPC(world: World?, name: String) : PassiveMob(world, name) {
 
     override fun createPathfinders() {
         addPathfinderGoal(2, PathfinderGoalRandomLookaround(this))
-        addPathfinderGoal(7, PathfinderGoalLookAtPlayerPitchLock(this, EntityTypes.PLAYER, 6.0, 0.02f))
+        addPathfinderGoal(7, LookAtPlayerGoal(this, EntityPlayer::class, 6.0f, 0.02f))
     }
 
     init {

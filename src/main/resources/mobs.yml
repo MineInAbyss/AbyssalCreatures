@@ -2,8 +2,9 @@ templates:
   # Passive
   neritantan:
     model: 2
-    max-health: 7
-    movement-speed: 0.25
+    attributes:
+      max-health: 7
+      movement-speed: 0.25
     min-exp: 5
     max-exp: 7
     tempt-items: [CARROT, POTATO, BEETROOT]
@@ -14,8 +15,9 @@ templates:
         drop-chance: 0.5
   ashimite:
     model: 53
-    max-health: 10
-    movement-speed: 0.5
+    attributes:
+      max-health: 10
+      movement-speed: 0.5
     min-exp: 5
     max-exp: 7
     drops:
@@ -32,8 +34,9 @@ templates:
         max-amount: 2
   makihige:
     model: 56
-    max-health: 10
-    movement-speed: 0.2
+    attributes:
+      max-health: 10
+      movement-speed: 0.2
     min-exp: 7
     max-exp: 10
     drops:
@@ -51,8 +54,9 @@ templates:
         max-amount: 2
   fuwagi:
     model: 5
-    max-health: 10
-    movement-speed: 0.25
+    attributes:
+      max-health: 10
+      movement-speed: 0.25
     min-exp: 5
     max-exp: 7
     tempt-items: [CARROT, APPLE]
@@ -76,8 +80,9 @@ templates:
         drop-chance: 0.2
   okibo:
     model: 38
-    max-health: 50
-    movement-speed: 0.2
+    attributes:
+      max-health: 50
+      movement-speed: 0.2
     min-exp: 5
     max-exp: 7
     drops:
@@ -98,10 +103,11 @@ templates:
   # Hostile
   inbyo:
     model: 8
-    max-health: 10
-    movement-speed: 0.4
-    attack-damage: 8
-    follow-range: 64
+    attributes:
+      max-health: 10
+      movement-speed: 0.4
+      attack-damage: 6
+      follow-range: 64
     min-exp: 7
     max-exp: 14
     drops:
@@ -116,10 +122,11 @@ templates:
           display-name: §rRaw Inbyo Meat
   rohana:
     model: 14
-    max-health: 10
-    movement-speed: 0.1
+    attributes:
+      max-health: 10
+      movement-speed: 0.1
+      attack-damage: 0
     adult: false
-    attack-damage: 0
     min-exp: 5
     max-exp: 7
     drops:
@@ -134,10 +141,11 @@ templates:
         drop-chance: 0.4
   tamaugachi:
     model: 17
-    max-health: 100
-    movement-speed: 0.45
-    attack-damage: 16
-    follow-range: 28
+    attributes:
+      max-health: 100
+      movement-speed: 0.45
+      attack-damage: 16
+      follow-range: 30
     min-exp: 25
     max-exp: 30
     drops:
@@ -155,9 +163,10 @@ templates:
         max-amount: 3
   silkfang:
     model: 26
-    max-health: 15
-    movement-speed: 0.3
-    attack-damage: 5
+    attributes:
+      max-health: 15
+      movement-speed: 0.3
+      attack-damage: 5
     min-exp: 7
     max-exp: 14
     drops:
@@ -174,10 +183,11 @@ templates:
         drop-chance: 0.2
   kuongatari:
     model: 35
-    max-health: 7
-    movement-speed: 0.3
-    attack-damage: 3
-    follow-range: 10
+    attributes:
+      max-health: 7
+      movement-speed: 0.3
+      attack-damage: 3
+      follow-range: 10
     min-exp: 5
     max-exp: 8
     drops:
@@ -194,9 +204,10 @@ templates:
         max-amount: 3
   tesuchi:
     model: 41
-    max-health: 1
-    movement-speed: 0.3
-    attack-damage: 0
+    attributes:
+      max-health: 1
+      movement-speed: 0.3
+      attack-damage: 0.5
     min-exp: 5
     max-exp: 7
     drops:
@@ -209,10 +220,11 @@ templates:
         drop-chance: 0.5
   ottobas:
     model: 44
-    max-health: 30
-    movement-speed: 0.4
-    attack-damage: 6
-    follow-range: 20
+    attributes:
+      max-health: 30
+      movement-speed: 0.4
+      attack-damage: 6
+      follow-range: 20
     min-exp: 13
     max-exp: 15
     drops:
@@ -222,19 +234,21 @@ templates:
         max-amount: 1
   steve:
     model: 59
-    max-health: 30
-    movement-speed: 0.3
-    attack-damage: 4
-    follow-range: 20
+    attributes:
+      max-health: 30
+      movement-speed: 0.3
+      attack-damage: 4
+      follow-range: 20
     min-exp: 20
     max-exp: 25
   # Flying
   corpse_weeper:
     model: 11
-    max-health: 20
-    follow-range: 15
-    attack-damage: 4
-    movement-speed: 0.1
+    attributes:
+      max-health: 20
+      follow-range: 15
+      attack-damage: 4
+      movement-speed: 0.1
     min-exp: 12
     max-exp: 15
     drops:
@@ -254,10 +268,11 @@ templates:
         max-amount: 4
   madokajack:
     model: 20
-    max-health: 20
-    follow-range: 20
-    attack-damage: 4
-    movement-speed: 0.12
+    attributes:
+      max-health: 20
+      follow-range: 20
+      attack-damage: 4
+      movement-speed: 0.12
     min-exp: 15
     max-exp: 20
     drops:
@@ -272,10 +287,11 @@ templates:
         max-amount: 2
   hammerbeak:
     model: 23
-    max-health: 20
-    follow-range: 13
-    attack-damage: 3
-    movement-speed: 0.1
+    attributes:
+      max-health: 20
+      follow-range: 13
+      attack-damage: 3
+      movement-speed: 0.1
     min-exp: 8
     max-exp: 12
     drops:
@@ -295,9 +311,10 @@ templates:
         max-amount: 4
   kazura:
     model: 29
-    max-health: 5
-    follow-range: 0
-    attack-damage: 0
+    attributes:
+      max-health: 5
+      follow-range: 0
+      attack-damage: 0
     min-exp: 5
     max-exp: 7
     drops:
@@ -307,10 +324,11 @@ templates:
         max-amount: 2
   benikuchinawa:
     model: 32
-    max-health: 50
-    follow-range: 15
-    attack-damage: 5
-    movement-speed: 0.1
+    attributes:
+      max-health: 50
+      follow-range: 15
+      attack-damage: 5
+      movement-speed: 0.1
     min-exp: 13
     max-exp: 16
     drops:
@@ -328,17 +346,19 @@ templates:
         drop-chance: 0.5
   dosetori:
     model: 47
-    max-health: 20
-    follow-range: 20
-    attack-damage: 3
-    movement-speed: 0.13
+    attributes:
+      max-health: 20
+      follow-range: 20
+      attack-damage: 3
+      movement-speed: 0.13
     min-exp: 8
     max-exp: 14
   cyatoria:
     model: 50
-    max-health: 20
-    follow-range: 20
-    attack-damage: 10
-    movement-speed: 0.05
+    attributes:
+      max-health: 20
+      follow-range: 20
+      attack-damage: 10
+      movement-speed: 0.05
     min-exp: 15
     max-exp: 22

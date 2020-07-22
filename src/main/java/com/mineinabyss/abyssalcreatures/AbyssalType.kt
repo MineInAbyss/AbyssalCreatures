@@ -3,10 +3,10 @@ package com.mineinabyss.abyssalcreatures
 import com.mineinabyss.abyssalcreatures.mobs.flying.*
 import com.mineinabyss.abyssalcreatures.mobs.hostile.*
 import com.mineinabyss.abyssalcreatures.mobs.passive.*
-import com.mineinabyss.mobzy.api.registerEntity
-import com.mineinabyss.mobzy.api.registerHardCodedTemplate
+import com.mineinabyss.mobzy.api.registerPersistentTemplate
+import com.mineinabyss.mobzy.api.registerMob
 import com.mineinabyss.mobzy.mobs.MobTemplate
-import net.minecraft.server.v1_16_R1.EnumCreatureType
+import net.minecraft.server.v1_16_R1.EnumCreatureType.*
 import org.bukkit.Material
 
 /**
@@ -15,36 +15,36 @@ import org.bukkit.Material
 @Suppress("SpellCheckingInspection", "unused")
 object AbyssalType {
     //Passive
-    val ASHIMITE = registerEntity("ashimite", EnumCreatureType.CREATURE, width = 2f, height = 2f, func = ::Ashimite)
-    val FUWAGI = registerEntity("fuwagi", EnumCreatureType.CREATURE, width = 0.6f, height = 0.6f, func = ::Fuwagi)
-    val MAKIHIGE = registerEntity("makihige", EnumCreatureType.WATER_CREATURE, width = 2f, height = 2f, func = ::Makihige)
-    val NERITANTAN = registerEntity("neritantan", EnumCreatureType.CREATURE, width = 0.6f, height = 0.6f, func = ::Neritantan)
-    val OKIBO = registerEntity("okibo", EnumCreatureType.CREATURE, width = 3f, height = 3f, func = ::Okibo)
+    val ASHIMITE = registerMob("ashimite", CREATURE, width = 2f, height = 2f, init = ::Ashimite)
+    val FUWAGI = registerMob("fuwagi", CREATURE, width = 0.6f, height = 0.6f, init = ::Fuwagi)
+    val MAKIHIGE = registerMob("makihige", WATER_CREATURE, width = 2f, height = 2f, init = ::Makihige)
+    val NERITANTAN = registerMob("neritantan", CREATURE, width = 0.6f, height = 0.6f, init = ::Neritantan)
+    val OKIBO = registerMob("okibo", CREATURE, width = 2.5f, height = 3f, init = ::Okibo)
 
     //Hostile
-    val INBYO = registerEntity("inbyo", EnumCreatureType.MONSTER, width = 0.6f, height = 3f, func = ::Inbyo)
-    val KUONGATARI = registerEntity("kuongatari", EnumCreatureType.MONSTER, width = 0.6f, height = 0.6f, func = ::Kuongatari)
-    val OTTOBAS = registerEntity("ottobas", EnumCreatureType.MONSTER, width = 2f, height = 3f, func = ::Ottobas)
-    val SILKFANG = registerEntity("silkfang", EnumCreatureType.MONSTER, width = 1.5f, height = 1.5f, func = ::Silkfang)
-    val STEVE = registerEntity("steve", EnumCreatureType.MONSTER, width = 2f, height = 7f, func = ::Steve)
-    val TAMAUGACHI = registerEntity("tamaugachi", EnumCreatureType.MONSTER, width = 2.2f, height = 2f, func = ::Tamaugachi)
-    val TESUCHI = registerEntity("tesuchi", EnumCreatureType.MONSTER, width = 0.6f, height = 0.6f, func = ::Tesuchi)
+    val INBYO = registerMob("inbyo", MONSTER, width = 0.6f, height = 3f, init = ::Inbyo)
+    val KUONGATARI = registerMob("kuongatari", MONSTER, width = 0.7f, height = 0.7f, init = ::Kuongatari)
+    val OTTOBAS = registerMob("ottobas", MONSTER, width = 1.9f, height = 2f, init = ::Ottobas)
+    val SILKFANG = registerMob("silkfang", MONSTER, width = 1.5f, height = 1.5f, init = ::Silkfang)
+    val STEVE = registerMob("steve", MONSTER, width = 2f, height = 7f, init = ::Steve)
+    val TAMAUGACHI = registerMob("tamaugachi", MONSTER, width = 1.9f, height = 2.5f, init = ::Tamaugachi)
+    val TESUCHI = registerMob("tesuchi", MONSTER, width = 0.6f, height = 0.6f, init = ::Tesuchi)
 
     //Flying
     //TODO I don't like using MISC for flying creatures, but this is how we're setting them to a separate mob cap for now
-    val BENIKUCHINAWA = registerEntity("benikuchinawa", EnumCreatureType.MISC, width = 4.5f, height = 2f, func = ::Benikuchinawa)
-    val CORPSE_WEEPER = registerEntity("corpse_weeper", EnumCreatureType.MISC, width = 3f, height = 3f, func = ::CorpseWeeper)
-    val CYATORIA = registerEntity("cyatoria", EnumCreatureType.MISC, width = 3f, height = 2f, func = ::Cyatoria)
-    val DOSETORI = registerEntity("dosetori", EnumCreatureType.MISC, width = 3f, height = 2f, func = ::Dosetori)
-    val HAMMERBEAK = registerEntity("hammerbeak", EnumCreatureType.MISC, width = 3f, height = 2f, func = ::Hammerbeak)
-    val KAZURA = registerEntity("kazura", EnumCreatureType.WATER_CREATURE, width = 1f, height = 1f, func = ::Kazura)
-    val MADOKAJACK = registerEntity("madokajack", EnumCreatureType.MISC, width = 4.5f, height = 3f, func = ::Madokajack)
-    val ROHANA = registerEntity("rohana", EnumCreatureType.WATER_CREATURE, width = 0.6f, height = 0.6f, func = ::Rohana)
+    val BENIKUCHINAWA = registerMob("benikuchinawa", MISC, width = 4.5f, height = 2f, init = ::Benikuchinawa)
+    val CORPSE_WEEPER = registerMob("corpse_weeper", MISC, width = 3f, height = 3f, init = ::CorpseWeeper)
+    val CYATORIA = registerMob("cyatoria", MISC, width = 3f, height = 2f, init = ::Cyatoria)
+    val DOSETORI = registerMob("dosetori", MISC, width = 3f, height = 2f, init = ::Dosetori)
+    val HAMMERBEAK = registerMob("hammerbeak", MISC, width = 3f, height = 2f, init = ::Hammerbeak)
+    val KAZURA = registerMob("kazura", WATER_CREATURE, width = 1f, height = 1f, init = ::Kazura)
+    val MADOKAJACK = registerMob("madokajack", MISC, width = 4.5f, height = 3f, init = ::Madokajack)
+    val ROHANA = registerMob("rohana", WATER_CREATURE, width = 0.6f, height = 0.6f, init = ::Rohana)
 
     //NPCs
     private fun registerNPC(name: String, modelID: Int) {
-        registerHardCodedTemplate(name, MobTemplate(_name = name, model = modelID, modelMaterial = Material.DIAMOND_AXE))
-        registerEntity(name, EnumCreatureType.MISC, width = 0.6f, height = 2f) { NPC(it, name) }
+        registerPersistentTemplate(name, MobTemplate(_name = name, model = modelID, modelMaterial = Material.DIAMOND_AXE))
+        registerMob(name, MISC, width = 0.6f, height = 2f) { NPC(it, name) }
     }
 
     val MITTY = registerNPC("Mitty", 2)

@@ -2,7 +2,7 @@ package com.mineinabyss.abyssalcreatures.mobs.passive
 
 import com.mineinabyss.mobzy.mobs.behaviours.HitBehaviour
 import com.mineinabyss.mobzy.mobs.types.PassiveMob
-import com.mineinabyss.mobzy.pathfinders.PathfinderGoalTemptPitchLock
+import com.mineinabyss.mobzy.pathfinders.TemptGoal
 import net.minecraft.server.v1_16_R1.EntityHuman
 import net.minecraft.server.v1_16_R1.PathfinderGoalAvoidTarget
 import net.minecraft.server.v1_16_R1.World
@@ -16,6 +16,6 @@ class Fuwagi(world: World?) : PassiveMob(world, "Fuwagi"), HitBehaviour {
     override fun createPathfinders() {
         super.createPathfinders()
         addPathfinderGoal(1, PathfinderGoalAvoidTarget(this, EntityHuman::class.java, 8.0f, 1.0, 1.0))
-        addPathfinderGoal(4, PathfinderGoalTemptPitchLock(this, template.temptItems))
+        addPathfinderGoal(4, TemptGoal(this, template.temptItems))
     }
 }

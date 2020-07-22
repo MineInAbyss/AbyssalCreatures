@@ -9,28 +9,7 @@ import java.io.File
 import java.lang.reflect.Field
 import java.lang.reflect.Modifier
 
-
-fun attributeTest(): AttributeProvider.Builder {
-    return EntityMonster.eS().a(GenericAttributes.FOLLOW_RANGE, 35.0).a(GenericAttributes.MOVEMENT_SPEED, 0.45).a(GenericAttributes.ATTACK_DAMAGE, 3.0).a(GenericAttributes.ARMOR, 2.0).a(GenericAttributes.SPAWN_REINFORCEMENTS)
-}
 class AbyssalCreatures : JavaPlugin(), MobzyAddon {
-
-    init {
-        try {
-            val modifiers: Field = Field::class.java.getDeclaredField("modifiers")
-            modifiers.isAccessible = true
-            val field: Field = AttributeDefaults::class.java.getDeclaredField("b")
-            modifiers.setInt(field, modifiers.getInt(field) and Modifier.FINAL.inv())
-            field.isAccessible = true
-            val defaultAttributes = HashMap(field.get(null) as Map<EntityTypes<*>, AttributeProvider>)
-            //TODO register automatically
-            defaultAttributes[AbyssalType.INBYO] = attributeTest().a()
-            defaultAttributes[AbyssalType.TAMAUGACHI] = attributeTest().a()
-            field.set(null, defaultAttributes)
-        } catch (reason: Throwable) {
-            error("Failed to inject custom attribute defaults")
-        }
-    }
 
     override fun onEnable() {
         logInfo("Enabling AbyssalCreatures")

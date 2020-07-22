@@ -2,13 +2,13 @@ package com.mineinabyss.abyssalcreatures.mobs.flying
 
 import com.mineinabyss.mobzy.mobs.behaviours.HitBehaviour
 import com.mineinabyss.mobzy.mobs.types.FlyingMob
-import com.mineinabyss.mobzy.pathfinders.flying.PathfinderGoalDiveOnTargetAttack
+import com.mineinabyss.mobzy.pathfinders.flying.DiveOnTargetAttackGoal
 import net.minecraft.server.v1_16_R1.World
 
 class Madokajack(world: World?) : FlyingMob(world, "Madokajack"), HitBehaviour {
     override fun createPathfinders() {
         super.createPathfinders()
-        addPathfinderGoal(2, PathfinderGoalDiveOnTargetAttack(
+        addPathfinderGoal(2, DiveOnTargetAttackGoal(
                 this,
                 minHeight = 6.0,
                 maxHeight = 10.0,
