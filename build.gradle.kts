@@ -6,18 +6,17 @@ plugins {
     idea
     id("com.github.johnrengelman.shadow")
     kotlin("jvm")
-    kotlin("kapt") version "1.3.72"
     id("io.github.0ffz.github-packages") version "1.0.1"
 }
 
 val kotlin_version: String by project
+val server_version: String by project
 
 group = "com.mineinabyss"
 val version: String = "${properties["plugin_version"]}${properties["buildNo"] ?: ""}"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 repositories {
@@ -26,21 +25,24 @@ repositories {
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
     maven("https://oss.sonatype.org/content/repositories/snapshots")
     maven("https://erethon.de/repo/") //HeadLib
+
+//    maven("https://hub.spigotmc.org/nexus/content/groups/public/")
+//    maven("https://jitpack.io")
+    maven("https://repo.dmulloy2.net/nexus/repository/public/") //lol these guys have NMS in there
+//    maven("https://maven.sk89q.com/repo/")
     githubPackage("MineInAbyss/Idofront")
-    githubPackage("CultOfClang/KotlinSpice")
+    githubPackage("MineInAbyss/KotlinSpice")
     mavenLocal()
 }
 
 dependencies {
-    compileOnly("org.spigotmc:spigot-api:1.15-R0.1-SNAPSHOT") //Spigot
-    compileOnly("org.spigotmc:spigot:1.15-R0.1-SNAPSHOT") // NMS
+    compileOnly("org.spigotmc:spigot-api:$server_version") //Spigot
+    compileOnly("org.spigotmc:spigot:$server_version") // NMS
     compileOnly("de.erethon:headlib:3.0.2")
     compileOnly("org.cultofclang.minecraft:kotlinspice:$kotlin_version+")
     compileOnly("com.mineinabyss:mobzy")
 
-    implementation("com.mineinabyss:idofront")
-    implementation("com.mineinabyss:idofront-annotation")
-    kapt("com.mineinabyss:idofront-processor")
+    implementation("com.mineinabyss:idofront:0.2.+")
 }
 
 tasks {
@@ -52,7 +54,7 @@ tasks {
         minimize()
     }
 
-    register<ProcessResources>("replaceTokens") {
+    processResources {
         println("Replacing tokens")
         filter<ReplaceTokens>("tokens" to mapOf("plugin_version" to version.also { println("Using version $version") }))
     }
@@ -72,6 +74,6 @@ tasks {
     }
 
     build {
-        dependsOn("copyJar", "replaceTokens")
+        dependsOn("copyJar", "processResources")
     }
 }

@@ -1,10 +1,10 @@
 package com.mineinabyss.abyssalcreatures.mobs
 
 import com.mineinabyss.idofront.items.editItemMeta
-import net.minecraft.server.v1_15_R1.*
-import net.minecraft.server.v1_15_R1.MovingObjectPosition.EnumMovingObjectType
+import net.minecraft.server.v1_16_R1.*
+import net.minecraft.server.v1_16_R1.MovingObjectPosition.EnumMovingObjectType
 import org.bukkit.Material
-import org.bukkit.craftbukkit.v1_15_R1.inventory.CraftItemStack
+import org.bukkit.craftbukkit.v1_16_R1.inventory.CraftItemStack
 import org.bukkit.inventory.ItemStack
 
 class ThrownRock(world: World?, thrower: EntityLiving) : EntitySnowball(world, thrower) {

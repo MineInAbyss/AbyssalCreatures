@@ -6,8 +6,8 @@ import com.mineinabyss.mobzy.pathfinders.flying.PathfinderGoalFlyDamageTarget
 import com.mineinabyss.mobzy.pathfinders.flying.PathfinderGoalFlyTowardsTarget
 import com.mineinabyss.mobzy.pathfinders.flying.PathfinderGoalHurtByTarget
 import com.mineinabyss.mobzy.pathfinders.flying.PathfinderGoalIdleFlyAboveGround
-import net.minecraft.server.v1_15_R1.PathfinderGoalFloat
-import net.minecraft.server.v1_15_R1.World
+import net.minecraft.server.v1_16_R1.PathfinderGoalFloat
+import net.minecraft.server.v1_16_R1.World
 
 class Rohana(world: World?) : FlyingMob(world, "Rohana"), HitBehaviour {
     override fun createPathfinders() {

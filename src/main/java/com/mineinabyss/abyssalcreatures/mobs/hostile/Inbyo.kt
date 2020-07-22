@@ -6,8 +6,8 @@ import com.mineinabyss.mobzy.mobs.behaviours.HitBehaviour
 import com.mineinabyss.mobzy.mobs.types.HostileMob
 import com.mineinabyss.mobzy.pathfinders.hostile.ItemThrowable
 import com.mineinabyss.mobzy.pathfinders.hostile.PathfinderGoalThrowItems
-import net.minecraft.server.v1_15_R1.PathfinderGoalNearestAttackableTarget
-import net.minecraft.server.v1_15_R1.World
+import net.minecraft.server.v1_16_R1.PathfinderGoalNearestAttackableTarget
+import net.minecraft.server.v1_16_R1.World
 
 class Inbyo(world: World?) : HostileMob(world, "Inbyo"), HitBehaviour, ItemThrowable {
     override fun createPathfinders() {

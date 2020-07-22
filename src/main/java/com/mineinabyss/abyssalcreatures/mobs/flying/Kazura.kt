@@ -5,10 +5,10 @@ import com.mineinabyss.mobzy.mobs.types.FlyingMob
 import com.mineinabyss.mobzy.pathfinders.flying.PathfinderGoalFlyDamageTarget
 import com.mineinabyss.mobzy.pathfinders.flying.PathfinderGoalFlyTowardsTarget
 import com.mineinabyss.mobzy.pathfinders.flying.PathfinderGoalIdleFlyAboveGround
-import net.minecraft.server.v1_15_R1.EntityHuman
-import net.minecraft.server.v1_15_R1.PathfinderGoalFloat
-import net.minecraft.server.v1_15_R1.PathfinderGoalNearestAttackableTarget
-import net.minecraft.server.v1_15_R1.World
+import net.minecraft.server.v1_16_R1.EntityHuman
+import net.minecraft.server.v1_16_R1.PathfinderGoalFloat
+import net.minecraft.server.v1_16_R1.PathfinderGoalNearestAttackableTarget
+import net.minecraft.server.v1_16_R1.World
 
 class Kazura(world: World?) : FlyingMob(world, "Kazura"), HitBehaviour {
     override fun createPathfinders() {

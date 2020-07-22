@@ -2,7 +2,7 @@ package com.mineinabyss.abyssalcreatures.mobs.passive
 
 import com.mineinabyss.mobzy.mobs.types.PassiveMob
 import com.mineinabyss.mobzy.pathfinders.PathfinderGoalLookAtPlayerPitchLock
-import net.minecraft.server.v1_15_R1.*
+import net.minecraft.server.v1_16_R1.*
 
 class NPC(world: World?, name: String) : PassiveMob(world, name) {
     //Stop from being pushed around

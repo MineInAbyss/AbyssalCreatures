@@ -17,5 +17,6 @@ pluginManagement {
     plugins {
         id("com.github.johnrengelman.shadow") version "5.2.0"
         kotlin("jvm") version kotlin_version
+        kotlin("kapt") version kotlin_version
     }
 }

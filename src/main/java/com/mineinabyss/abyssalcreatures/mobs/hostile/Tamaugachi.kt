@@ -3,7 +3,7 @@ package com.mineinabyss.abyssalcreatures.mobs.hostile
 import com.mineinabyss.idofront.items.editItemMeta
 import com.mineinabyss.mobzy.mobs.behaviours.HitBehaviour
 import com.mineinabyss.mobzy.mobs.types.HostileMob
-import net.minecraft.server.v1_15_R1.World
+import net.minecraft.server.v1_16_R1.World
 import org.bukkit.Material
 import org.bukkit.enchantments.Enchantment
 import org.bukkit.inventory.ItemStack

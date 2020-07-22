@@ -6,7 +6,7 @@ import com.mineinabyss.abyssalcreatures.mobs.passive.*
 import com.mineinabyss.mobzy.api.registerEntity
 import com.mineinabyss.mobzy.api.registerHardCodedTemplate
 import com.mineinabyss.mobzy.mobs.MobTemplate
-import net.minecraft.server.v1_15_R1.EnumCreatureType
+import net.minecraft.server.v1_16_R1.EnumCreatureType
 import org.bukkit.Material
 
 /**
