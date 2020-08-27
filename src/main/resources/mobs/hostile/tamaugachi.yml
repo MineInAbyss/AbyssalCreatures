@@ -1,0 +1,30 @@
+baseClass: mobzy:hostile
+creatureType: MONSTER
+staticComponents:
+  - !<mobzy:model>
+    id: 17
+  - !<mobzy:attributes>
+    maxHealth: 100
+    movementSpeed: 0.41
+    attackDamage: 15
+    followRange: 40
+    width: 1.9
+    height: 2.5
+  - !<mobzy:death_loot>
+    minExp: 25
+    maxExp: 30
+    drops:
+      - item:
+          type: QUARTZ
+          display-name: §rOrb Piercer Spike
+          lore: [They look very pointy]
+        minAmount: 5
+        maxAmount: 8
+      - item:
+          type: NETHER_WART
+          display-name: §rOrb Piercer Nose Fragment
+          lore: [Squishy]
+        minAmount: 1
+        maxAmount: 3
+  - !<mobzy:increased_water_speed>
+    level: 40

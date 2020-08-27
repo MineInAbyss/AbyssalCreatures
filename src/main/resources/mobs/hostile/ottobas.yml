@@ -1,0 +1,20 @@
+baseClass: mobzy:hostile
+creatureType: MONSTER
+staticComponents:
+  - !<mobzy:model>
+    id: 44
+  - !<mobzy:attributes>
+    maxHealth: 30
+    movementSpeed: 0.4
+    attackDamage: 6
+    followRange: 20
+    width: 1.9
+    height: 2
+  - !<mobzy:death_loot>
+    minExp: 13
+    maxExp: 15
+    drops:
+      - item:
+          type: PORKCHOP
+          display-name: §rRaw Ottobas Meat
+        maxAmount: 1

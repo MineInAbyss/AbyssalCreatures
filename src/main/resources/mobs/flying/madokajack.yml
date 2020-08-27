@@ -1,0 +1,38 @@
+baseClass: mobzy:flying
+creatureType: MISC
+staticComponents:
+  - !<mobzy:model>
+    id: 20
+  - !<mobzy:attributes>
+    maxHealth: 20
+    followRange: 25
+    attackDamage: 4
+    flyingSpeed: 10
+    width: 3.5
+    height: 3
+  - !<mobzy:death_loot>
+    minExp: 15
+    maxExp: 20
+    drops:
+      - item:
+          type: PRISMARINE_SHARD
+          display-name: §rMadokajack Scales
+        minAmount: 2
+        maxAmount: 3
+      - item:
+          type: BONE
+        minAmount: 1
+        maxAmount: 2
+targets:
+  1: !<mobzy:target.attacker>
+    range: 100
+  2: !<minecraft:target.nearby_player> {}
+goals:
+  1: !<mobzy:behavior.flying_damage_target> {}
+  2: !<mobzy:behavior.fly_towards_target> {}
+  3: !<mobzy:behavior.flying_dive_on_target>
+    minHeight: 6
+    maxHeight: 10
+    startDiveDistance: 14
+    bashVelMultiplier: 1
+  4: !<mobzy:behavior.idle_fly> {}

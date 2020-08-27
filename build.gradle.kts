@@ -75,5 +75,6 @@ tasks {
 
     build {
         dependsOn("copyJar", "processResources")
+//        dependsOn(gradle.includedBuild("Mobzy").task(":copyJar"))
     }
 }

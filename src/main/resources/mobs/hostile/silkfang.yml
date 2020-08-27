@@ -1,0 +1,29 @@
+baseClass: mobzy:hostile
+creatureType: MONSTER
+staticComponents:
+  - !<mobzy:model>
+    id: 26
+  - !<mobzy:attributes>
+    maxHealth: 15
+    movementSpeed: 0.3
+    attackDamage: 5
+    width: 1.5
+    height: 1.5
+  - !<mobzy:death_loot>
+    minExp: 7
+    maxExp: 14
+    drops:
+      - item:
+          type: STRING
+          display-name: §rSilkfang Silk
+          lore: [Finer than a Spider's]
+        minAmount: 1
+        maxAmount: 3
+      - item:
+          type: SPIDER_EYE
+          display-name: §rSilkfang Eye
+          lore: [It stares back at you]
+        dropChance: 0.2
+goals:
+  1: !<minecraft:behavior.leap_at_target>
+    jumpHeight: 0.3

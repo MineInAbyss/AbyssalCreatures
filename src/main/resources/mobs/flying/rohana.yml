@@ -1,0 +1,33 @@
+baseClass: mobzy:flying
+creatureType: WATER_CREATURE
+staticComponents:
+  - !<mobzy:model>
+    id: 14
+    small: true
+  - !<mobzy:attributes>
+    maxHealth: 10
+    flyingSpeed: 10.005
+    attackDamage: 0
+    width: 0.6
+    height: 0.6
+  - !<mobzy:death_loot>
+    minExp: 5
+    maxExp: 7
+    drops:
+      - item:
+          type: GLOWSTONE_DUST
+          display-name: §rRohana Dust
+        dropChance: 0.8
+      - item:
+          type: BLAZE_ROD
+          display-name: §rRohana Tail
+          lore: [It glows faintly]
+        dropChance: 0.4
+targets:
+  1: !<mobzy:target.attacker> {}
+goals:
+  1: !<mobzy:behavior.flying_damage_target> {}
+  2: !<mobzy:behavior.fly_towards_target> {}
+  3: !<mobzy:behavior.idle_fly_above_ground>
+    maxHeight: 4
+    radius: 5

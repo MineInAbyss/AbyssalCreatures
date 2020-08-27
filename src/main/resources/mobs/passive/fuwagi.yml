@@ -1,0 +1,36 @@
+baseClass: mobzy:passive
+creatureType: CREATURE
+staticComponents:
+  - !<mobzy:model>
+    id: 5
+  - !<mobzy:attributes>
+    maxHealth: 10
+    movementSpeed: 0.25
+    width: 0.6
+    height: 0.6
+  - !<mobzy:death_loot>
+    minExp: 5
+    maxExp: 7
+    drops:
+      - item:
+          type: RABBIT
+          display-name: §rRaw Fuwagi Meat
+          custom-model-data: 1
+        cooked:
+          type: COOKED_RABBIT
+          display-name: §rCooked Fuwagi Meat
+          custom-model-data: 1
+        dropChance: 0.5
+      - item:
+          type: RABBIT_FOOT
+          display-name: §rFuwagi Foot
+        dropChance: 0.1
+      - item:
+          type: RABBIT_HIDE
+          display-name: §rFuwagi Hide
+        dropChance: 0.2
+goals:
+  1: !<minecraft:behavior.tempt>
+    items: [CARROT, APPLE, BEETROOT]
+  2: !<minecraft:behavior.avoid_player>
+    radius: 10

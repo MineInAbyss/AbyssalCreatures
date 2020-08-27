@@ -1,0 +1,28 @@
+baseClass: mobzy:flying
+creatureType: WATER_CREATURE
+staticComponents:
+  - !<mobzy:model>
+    id: 29
+  - !<mobzy:attributes>
+    maxHealth: 5
+    followRange: 10
+    attackDamage: 0
+    flyingSpeed: 2
+    width: 1
+    height: 1
+  - !<mobzy:death_loot>
+    minExp: 5
+    maxExp: 7
+    drops:
+      - item:
+          type: INK_SAC
+        minAmount: 1
+        maxAmount: 2
+targets:
+  1: !<mobzy:target.attacker> {}
+goals:
+  1: !<mobzy:behavior.flying_damage_target> {}
+  2: !<mobzy:behavior.fly_towards_target> {}
+  3: !<mobzy:behavior.idle_fly_above_ground>
+    maxHeight: 2
+    radius: 16

@@ -1,0 +1,44 @@
+baseClass: mobzy:flying
+creatureType: MISC
+staticComponents:
+  - !<mobzy:model>
+    id: 32
+  - !<mobzy:attributes>
+    maxHealth: 50
+    followRange: 25
+    attackDamage: 5
+    flyingSpeed: 4
+    width: 4
+    height: 2
+  - !<mobzy:death_loot>
+    minExp: 13
+    maxExp: 16
+    drops:
+      - item:
+          type: POPPED_CHORUS_FRUIT
+          display-name: §rSplitjaw Scales
+        minAmount: 2
+        maxAmount: 3
+      - item:
+          type: SHULKER_SHELL
+          display-name: §rSplitjaw Shell
+        dropChance: 0.15
+      - item:
+          type: SLIME_BALL
+        dropChance: 0.5
+  - !<mobzy:sounds>
+    ambient: entity.llama.ambient
+    death: entity.llama.death
+    hurt: entity.llama.hurt
+targets:
+  1: !<mobzy:target.attacker>
+    range: 100
+  2: !<minecraft:target.nearby_player> {}
+goals:
+  1: !<mobzy:behavior.flying_damage_target> {}
+  2: !<mobzy:behavior.flying_dive_on_target>
+    diveVelocity: -0.03
+    minHeight: 3
+    maxHeight: 5
+  3: !<mobzy:behavior.fly_towards_target> {}
+  4: !<mobzy:behavior.idle_fly> {}

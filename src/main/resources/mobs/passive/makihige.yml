@@ -1,0 +1,31 @@
+baseClass: mobzy:passive
+creatureType: WATER_CREATURE
+staticComponents:
+  - !<mobzy:model>
+    id: 56
+  - !<mobzy:attributes>
+    maxHealth: 10
+    movementSpeed: 0.2
+    width: 2
+    height: 2
+  - !<mobzy:death_loot>
+    minExp: 7
+    maxExp: 10
+    drops:
+      - item:
+          type: INK_SAC
+        minAmount: 1
+        maxAmount: 2
+      - item:
+          type: OBSIDIAN
+          display-name: §rMakihige Shell
+        dropChance: 0.2
+      - item:
+          type: LEATHER
+        minAmount: 1
+        maxAmount: 2
+  - !<mobzy:increased_water_speed>
+    level: 20
+goals:
+  1: !<minecraft:behavior.avoid_player>
+    radius: 5

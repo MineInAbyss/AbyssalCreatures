@@ -1,0 +1,30 @@
+baseClass: mobzy:hostile
+creatureType: MONSTER
+staticComponents:
+  - !<mobzy:model>
+    id: 35
+  - !<mobzy:attributes>
+    maxHealth: 7
+    movementSpeed: 0.3
+    attackDamage: 3
+    followRange: 10
+    width: 0.7
+    height: 0.7
+  - !<mobzy:death_loot>
+    minExp: 5
+    maxExp: 8
+    drops:
+      - item:
+          type: LIME_DYE
+          display-name: §rKuongatari Dye
+          lore: [A very vibrant green]
+        dropChance: 0.4
+      - item:
+          type: STRING
+          display-name: §rKuongatari Silk
+          lore: [Finer than a Silkfang's]
+        minAmount: 1
+        maxAmount: 3
+goals:
+  1: !<minecraft:behavior.leap_at_target>
+    jumpHeight: 0.6

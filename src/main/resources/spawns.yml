@@ -98,8 +98,14 @@ regions:
         max-light: 7
         max-local-group: 1
         local-group-radius: 128.0
+        priority: 0.5
         block-whitelist:
           - WATER
+      - reuse: Template:Fuwagi
+        mob: Ashimite
+        radius: 10.0
+        block-whitelist:
+          - SNOW_BLOCK
       - mob: Kuongatari
         min-amount: 2
         max-amount: 4

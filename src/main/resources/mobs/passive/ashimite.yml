@@ -1,0 +1,29 @@
+baseClass: mobzy:passive
+creatureType: CREATURE
+staticComponents:
+  - !<mobzy:model>
+    id: 53
+  - !<mobzy:attributes>
+    maxHealth: 10
+    movementSpeed: 0.5
+    width: 2
+    height: 2
+  - !<mobzy:death_loot>
+    minExp: 5
+    maxExp: 7
+    drops:
+      - item:
+          type: PORKCHOP
+          custom-model-data: 1
+          display-name: §rRaw Ashimite Meat
+        cooked:
+          type: COOKED_PORKCHOP
+          display-name: §rCooked Ashimite Meat
+          custom-model-data: 1
+        dropChance: 0.5
+        minAmount: 1
+        maxAmount: 2
+  - !<mobzy:rideable> {}
+goals:
+  1: !<minecraft:behavior.avoid_player>
+    radius: 10
